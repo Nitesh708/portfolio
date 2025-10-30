@@ -35,14 +35,14 @@ const skillCategories: SkillCategory[] = [
     title: "Frameworks & Databases",
     titleColor: "text-fuchsia-400", // Using Fuchsia for frameworks/databases
     skills: [
-      { name: "Spring Boot", icon: "devicon-springboot-plain-wordmark" }, // From resume
+      { name: "Spring Boot", icon: "devicon-spring-plain-wordmark colored" }, // From resume
       { name: "Angular", icon: "devicon-angularjs-plain" }, // From resume
       { name: "Flask", icon: "devicon-flask-original-wordmark" }, // From resume
       { name: "MySQL", icon: "devicon-mysql-plain-wordmark" }, // From resume
       { name: "DynamoDB", icon: "devicon-amazonwebservices-plain-wordmark" }, // From resume
       { name: "Timestream", icon: "devicon-amazonwebservices-plain-wordmark" }, // From resume (AWS icon used as approximation)
       { name: "Selenium", icon: "devicon-selenium-original" }, // From resume
-      { name: "Appium", icon: "devicon-appium-original" }, // From resume
+        { name: "Appium", icon: "devicon-appium-original" }, // From resume
       // Added MongoDB from the project section for completeness
     ],
   },
@@ -67,9 +67,9 @@ const skillCategories: SkillCategory[] = [
       { name: "JIRA", icon: "devicon-jira-plain-wordmark" }, // From resume
       { name: "IntelliJ", icon: "devicon-intellij-plain-wordmark" }, // From resume
       { name: "Visual Studio", icon: "devicon-visualstudio-plain" }, // From resume
-      { name: "Leadership", icon: "devicon-bash-plain" }, // General icon
-      { name: "Goal-Oriented", icon: "devicon-bash-plain" }, // General icon
-      { name: "DaVinci Resolve", icon: "devicon-bash-plain" }, // General icon (for Video Editing)
+      { name: "Leadership", icon: "devicon-bash-plan" }, // General icon
+      { name: "Goal-Oriented", icon: "devicon-bash-pain" }, // General icon
+      { name: "DaVinci Resolve 20.0", icon: "devicon-bash-lain" }, // General icon (for Video Editing)
     ],
   },
 ];
