@@ -109,7 +109,7 @@ export default function Hero() {
           {/* Tagline/Greeting */}
           <motion.div variants={item} className="space-y-2 md:space-y-4">
             <h2 className="text-lg md:text-xl text-fuchsia-400 font-mono tracking-wider">
-              Hi, I'm
+              Hi, My Name is
             </h2>
             {/* Primary Name */}
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-extrabold text-white tracking-tight">
