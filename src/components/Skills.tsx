@@ -35,7 +35,7 @@ const skillCategories: SkillCategory[] = [
     title: "Frameworks & Databases",
     titleColor: "text-fuchsia-400", // Using Fuchsia for frameworks/databases
     skills: [
-      { name: "Spring Boot", icon: "devicon-spring-plain-wordmark colored" }, // From resume
+      { name: "Spring Boot", icon: "devicon-spring-plain-wordmark" }, // From resume
       { name: "Angular", icon: "devicon-angularjs-plain" }, // From resume
       { name: "Flask", icon: "devicon-flask-original-wordmark" }, // From resume
       { name: "MySQL", icon: "devicon-mysql-plain-wordmark" }, // From resume

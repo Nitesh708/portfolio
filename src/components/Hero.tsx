@@ -9,8 +9,7 @@ import { useState, useEffect } from 'react';
 // The constant with your desired roles (now using the article "a")
 const ROLES = [
   "I am a Full Stack Developer",
-  "I am a Video Editor and Youtuber",
-  "I am a Gamer",
+  "I love to code",
 ];
 
 // Custom hook to handle the typing and deleting logic
@@ -151,7 +150,7 @@ export default function Hero() {
             </motion.a>
             <motion.a
               variants={buttonItem}
-              href="#projects"
+              href="#leadership"
               className="px-8 md:px-10 py-3 md:py-4 border-2 border-fuchsia-400 text-fuchsia-400 font-semibold rounded-xl hover:bg-fuchsia-400 hover:text-white transition-colors text-base md:text-lg tracking-wide"
             >
               View Work
