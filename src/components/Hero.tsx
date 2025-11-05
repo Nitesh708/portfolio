@@ -13,7 +13,7 @@ const ROLES = [
 ];
 
 // Custom hook to handle the typing and deleting logic
-const useTypingEffect = (words: string[], speed = 100, delay = 1500) => {
+const useTypingEffect = (words: string[], speed = 80, delay = 1500) => {
   const [index, setIndex] = useState(0); 
   const [text, setText] = useState(''); 
   const [isDeleting, setIsDeleting] = useState(false); 
@@ -97,7 +97,7 @@ export default function Hero() {
         id="home" 
         className="min-h-screen flex items-center justify-center relative bg-[#0d0d1a] overflow-hidden"
     >
-      <div className="container mx-auto px-6 md:px-12 lg:px-24 max-w-10xl relative z-10">
+      <div className="container mx-auto px-6 md:px-12 lg:px-24 max-w-14xl relative z-10">
         <motion.div
           variants={container}
           initial="hidden"

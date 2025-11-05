@@ -98,7 +98,7 @@ export default function Skills() {
 
   return (
     <section id="skills" className="py-20 md:py-28 bg-[#0a0f1c] text-white">
-      <div className="container mx-auto px-6 md:px-12 lg:px-20 max-w-10xl"> {/* Using max-w-7xl for consistency */}
+      <div className="container mx-auto px-6 md:px-12 lg:px-20 max-w-14xl"> {/* Using max-w-7xl for consistency */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}

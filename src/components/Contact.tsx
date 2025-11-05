@@ -112,7 +112,7 @@ const handleSubmit = async (e: FormEvent) => {
 
   return (
     <section id="contact" className="py-20 md:py-32 bg-[#0d0d1a] text-white relative">
-      <div className="container mx-auto px-6 md:px-12 lg:px-24 max-w-10xl">
+      <div className="container mx-auto px-6 md:px-12 lg:px-24 max-w-14xl">
         
         {/* Section Header */}
         <motion.div

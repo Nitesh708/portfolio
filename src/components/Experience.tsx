@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, Variants } from "framer-motion";
-import { Briefcase, Activity, Users, Award, LucideIcon } from "lucide-react"; // Import LucideIcon for better type safety
+import { Briefcase, Activity, LucideIcon } from "lucide-react"; // Import LucideIcon for better type safety
 // Removed unnecessary React.ElementType import for LucideIcon
 
 // --- INTERFACES & DATA (No major changes needed here, data is complete) ---
@@ -18,10 +18,7 @@ interface LeadershipItem { // Renamed from 'Leadership' to 'LeadershipItem' for 
 // Define a map that links the title string to the LucideIcon component
 const IconMap: { [key: string]: LucideIcon } = {
   "Technical Lead": Briefcase,
-  "Freelance Development": Activity,
-  "Junior Partner": Briefcase, 
-  "Technical Executive": Users, 
-  "AMCAT 2nd Rank Holder": Award, 
+  "Freelance Development": Activity
 };
 
 // --- ANIMATION VARIANTS (No changes needed) ---
@@ -75,7 +72,7 @@ export default function Leadership() {
     // If not using a custom config, the hex colors are fine, but using general classes like 'bg-gray-900' is better practice.
     // Keeping the original dark hex for fidelity: #0d0d1aa
     <section id="leadership" className="py-20 md:py-32 bg-[#0d0d1a] text-white">
-      <div className="container mx-auto px-6 md:px-12 lg:px-20 max-w-10xl"> {/* Reduced max-w from 8l to a standard 7xl */}
+      <div className="container mx-auto px-6 md:px-12 lg:px-20 max-w-14xl"> {/* Reduced max-w from 8l to a standard 7xl */}
         
         {/* Header Section */}
         <motion.div
