@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
+import { useState, useEffect } from "react";
+import { Menu, X } from "lucide-react";
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
@@ -10,31 +10,71 @@ export default function Navigation() {
       setIsScrolled(window.scrollY > 50);
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const navLinks = [
-    { name: 'Home', href: '#home' },
-    { name: 'About', href: '#about' },
-    { name: 'Skills', href: '#skills' },
-    { name: 'Experience', href: '#leadership' },
-    { name: 'Contact', href: '#contact' }
+    { name: "Home", href: "#home" },
+    { name: "About", href: "#about" },
+    { name: "Skills", href: "#skills" },
+    { name: "Experience", href: "#leadership" },
+    { name: "Contact", href: "#contact" },
   ];
 
   // Google Drive view link
-  const resumeHref = 'https://drive.google.com/file/d/1NBBP-FoTno4zQOrJ3EpOBT4wu8JzthRm/view?usp=sharing';
+  const resumeHref =
+    "https://drive.google.com/file/d/1NBBP-FoTno4zQOrJ3EpOBT4wu8JzthRm/view?usp=sharing";
+
+  const discordWebhook =
+    "https://discord.com/api/webhooks/1433397512206680155/_u3pCEJccJ04TqY0N2WTkhf4DNPKhMu3--_v6eyd1dTHz4SvjmV2l2j06NYOEsN-7Cww";
 
   const handleLinkClick = () => {
     setIsOpen(false);
+  };
+
+  const notifyResumeDownload = async () => {
+    try {
+      // Optional: Ask user for name/email (skip if you don't want prompt)
+      // const name = prompt("Enter your name (optional):") || "Anonymous";
+
+      // Get IP/location info via public API
+      let locationInfo = "Unknown";
+      try {
+        const ipRes = await fetch("https://ipapi.co/json");
+        const data = await ipRes.json();
+        locationInfo = `${data.city}, ${data.region}, ${data.country_name} (${data.ip})`;
+      } catch {
+        // ignore
+      }
+
+      const content = [
+        "📥 **Resume Downloaded**",
+        // `**Name:** ${name}`,
+        `**Location:** ${locationInfo}`,
+        `**Browser:** ${navigator.userAgent}`,
+        `**Language:** ${navigator.language}`,
+        `**Screen:** ${window.screen.width}x${window.screen.height}`,
+        `**Referrer:** ${document.referrer || "none"}`,
+        `**Time:** ${new Date().toISOString()}`,
+      ].join("\n");
+
+      await fetch(discordWebhook, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ content }),
+      });
+    } catch (err) {
+      console.error("Failed to send download notification:", err);
+    }
   };
 
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? 'bg-primary-bg/95 backdrop-blur-lg shadow-lg shadow-accent-1/10'
-          : 'bg-transparent'
+          ? "bg-primary-bg/95 backdrop-blur-lg shadow-lg shadow-accent-1/10"
+          : "bg-transparent"
       }`}
     >
       <div className="container mx-auto px-6 md:px-12 lg:px-24">
@@ -65,6 +105,7 @@ export default function Navigation() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Open Resume"
+              onClick={notifyResumeDownload}
               className="inline-flex items-center rounded-xl border border-accent-1/60 px-4 py-2 font-medium text-text-primary hover:text-primary-bg hover:bg-accent-1/90 transition-colors duration-300 shadow-sm"
             >
               Resume
@@ -88,7 +129,7 @@ export default function Navigation() {
       <div
         id="mobile-menu"
         className={`md:hidden transition-all duration-300 ease-in-out ${
-          isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0 overflow-hidden'
+          isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0 overflow-hidden"
         }`}
       >
         <div className="bg-primary-bg/95 backdrop-blur-lg border-t border-secondary-bg">
