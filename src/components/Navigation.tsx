@@ -24,7 +24,7 @@ export default function Navigation() {
 
   // Google Drive view link
   const resumeHref =
-    "https://drive.google.com/file/d/1NBBP-FoTno4zQOrJ3EpOBT4wu8JzthRm/view?usp=sharing";
+    "https://drive.google.com/file/d/1C2k8xZ7FrBa2CRQStNs8_LUkC9PXmkYK/view?usp=sharing";
 
   const discordWebhook =
     "https://discord.com/api/webhooks/1433397512206680155/_u3pCEJccJ04TqY0N2WTkhf4DNPKhMu3--_v6eyd1dTHz4SvjmV2l2j06NYOEsN-7Cww";
