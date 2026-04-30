@@ -19,12 +19,13 @@ export default function Navigation() {
     { name: "About", href: "#about" },
     { name: "Skills", href: "#skills" },
     { name: "Experience", href: "#leadership" },
+    { name: "Projects", href: "#projects" },
     { name: "Contact", href: "#contact" },
   ];
 
   // Google Drive view link
   const resumeHref =
-    "https://drive.google.com/file/d/1C2k8xZ7FrBa2CRQStNs8_LUkC9PXmkYK/view?usp=sharing";
+    "https://drive.google.com/file/d/1IowTkDohae-6A-VqFda9NMxxmQEHPdIW/view?usp=sharing";
 
   const discordWebhook =
     "https://discord.com/api/webhooks/1433397512206680155/_u3pCEJccJ04TqY0N2WTkhf4DNPKhMu3--_v6eyd1dTHz4SvjmV2l2j06NYOEsN-7Cww";
